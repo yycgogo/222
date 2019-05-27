@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyc.dao.user.UserDao">
+
+<select id="findAll" resultType="com.yyc.pojo.User">
+	select * from user
+</select>
+
+<select id="findByName" resultType="com.yyc.pojo.User">
+	select * from user where u_name=#{u_name}
+</select>
+
+<delete id="delById">
+	delete from user where u_id=#{u_id}
+</delete>
+
+</mapper>
